@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import firebase from "firebase";
 import Preloader from "../src/components/Pre";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
@@ -18,6 +19,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
+  const firebaseApp = firebase.apps[0];
   const [load, upadateLoad] = useState(true);
 
   useEffect(() => {
